@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Modules>
+	<Module id="base">
+		<Page modified="2020-05-12T19:17:01.870880" name="Agreement" source="1H-A User Agreement v2.docx">
+			<Title>User Agreement</Title>
+			<Body>This is a beta test version of a software product named HawkEye (Software), developed and owned by Kodukula &amp; Associates, Inc. (K&amp;A), located at 200 E. Randolph St., Suite 5100, Chicago, Illinois, USA. The Software is used for educational and other non-commercial purpose and is not commercially available. You, as the user, are given a limited non-exclusive, nontransferable, revocable license to use the Software solely for internal evaluation and education/training purpose and not for any commercial application. You will not receive any technical support, but comprehensive "help" documentation is provided as part of the overall product package. </Body>
+			<Body>You will not copy, distribute, sell, sublicense, or otherwise transfer or make available the Software or any portion thereof to any third party; remove from view any copyright legend; modify, adapt, translate, reverse engineer, decompile or derive the source code for the Software, or authorize a third party to do any of the foregoing. K&amp;A is not liable for any damages that may result in connection with the use of, or any errors or defects in, the Software. </Body>
+			<Body>We appreciate your interest in our Software. Please send us your feedback and feel free to contact us for any additional information at .</Body>
+		</Page>
+		<Page modified="2020-06-01T20:48:37.513961" name="Introduction" source="1H-B Product Introduction PSK May 31 2020.docx">
+			<Title>Product Introduction</Title>
+			<Body>HawkEye is a software application consisting of quantitative tools for analyzing project uncertainty and risks that help facilitate executive decision making. These tools are designed for estimating project net present value (NPV), cost, and schedule; calculating expected values using decision trees; and selecting the right projects for a portfolio. </Body>
+			<Body>Current risk management and decision analysis practice typically involves deterministic models where the input and the output estimates of the model are "single" values. By definition, the deterministic models do not take into account the uncertainty associated with the input estimates. Furthermore, deterministic estimates for project cost and schedule are typically made based on discrete project tasks that are part of the project scope of work without any consideration for risk events, which can have an enormous impact on the output estimates.  As a result, the output estimates likely are overly optimistic making a project look highly attractive for investment but potentially leading to ultimate failure, if the investment was made. </Body>
+			<Body>There is a strong need today in the project management profession for quantitative tools that help us understand and gain better insights into project uncertainty and risk events, so that better decisions can be made.</Body>
+			<Body>HawkEye offers three most important functions through which you can: 1) Account for the uncertainty (referred to as variability risk by PMI) as well as the risk caused by discrete risk events (referred to as events risk by PMI), 2) Perform sensitivity analysis to identify the input variables with the highest impact on a given output estimate, and 3) Select the right projects from a pool of candidates to build an optimum portfolio that would yield the highest NPV. HawkEye attempts to achieve these functions, among others, through a time-tested technique called simulation. </Body>
+			<Body>The engine behind HawkEye, the so-called Monte Carlo simulation, generates a range of output values (bracketed by minimum and maximum) for an estimate (e.g., NPV, cost, schedule, etc.) and numerous possibilities in between. Each possible scenario, called an iteration, results in one output value based on the model calculations that utilize one set of values of each input. For any given input, its value for any iteration is randomly generated from a range of its possible values. This overall process is known as stochastic or probabilistic modeling that creates a range of possible output values from a range of possible input values as opposed to the deterministic modeling, where each estimate is only one single value. With stochastic modeling, executives can gain more meaningful insights into the numerous possible project outcomes to facilitate better decisions ultimately leading to higher rates of project success. </Body>
+			<Body>HawkEye consists of seven modules: One-Dimensional Sensitivity Analysis, Project NPV, Project Cost, Project Schedule, Schedule and Cost Integration, Decision Tree, and Portfolio Optimization. There is no relationship between these modules, and therefore, you may use them independent of each other. Many of the input and output files, tables, and figures in these modules use the same format to create consistency for ease of use. The Monte Carlo simulation technique, wherever applied, is the same for all the modules.</Body>
+		</Page>
+		<Page modified="2020-06-01T20:51:05.504350" name="ChoosePage" source="2H Choose Model PSK May 31 2020.docx">
+			<Title>Project Risk and Decision Analysis Modules</Title>
+			<Section>1 Purpose</Section>
+			<Body>To select the module of interest</Body>
+			<Section>2 Modules</Section>
+			<Body>The user needs to select one of the seven modules:</Body>
+			<BulletBody>Click on the module of interest</BulletBody>
+			<Body>A brief description of each module included in these modules follows.</Body>
+			<SubSection>2.1 Sensitivity Analysis</SubSection>
+			<Body>Prior to performing a detailed stochastic modeling of project net present value (NPV), cost, and schedule estimates using HawkEye, you may first apply one-dimensional sensitivity analysis. Stochastic modeling requires identification of distributions (e.g., normal, pert, triangular, etc.) and distribution parameters (e.g., minimum, most likely, and maximum values) for model input variables. It may involve a significant amount of effort, especially if the number of inputs is large. For example, in order to estimate and stochastically analyze total project duration (output of your schedule module), you may need to identify distribution and corresponding parameters for dozens of individual task durations (inputs to your model). </Body>
+			<Body>Typically it's only a few inputs that often have a significant impact on the model output. Therefore, common practice is to identify and focus on the most important inputs rather than expend an enormous effort on all the inputs. This is accomplished by evaluating the sensitivity of the output, that is, change in the output value, to change in the value of each input, one at a time; hence the name one-dimensional sensitivity analysis. </Body>
+			<Body>HawkEye performs one-dimensional analysis as follows: 1) Start with the "base case" where an output (e.g., NPV, Cost, schedule, etc.) is estimated using single deterministic values (base case values) for each required input; 2) Change each input value by +/- X% at a time while keeping all the other inputs at their respective base case values; 3) Calculate the output values for the two +/- scenarios; and 4) Compare the relative impact of each input variable on the output value by ranking them from the highest to the lowest in the form of a "tornado" diagram. (You may then select only the top most input variables to create distribution for subsequent stochastic analysis.) </Body>
+			<SubSection>2.2 Project Net Present Value</SubSection>
+			<Body>NPV of a project is simply the difference, expressed in today's dollars, between the total expected free cash flow to be generated by its products or services during their lifetime and the initial investment required to develop those products and services. Free cash flow is the expected revenue discounted to today after accounting for cost of producing the products or services, operating expenses, interest, taxes and capital expenditures. NPV represents the "take home" profit due to the products or services resulting from the project. A project is deemed to be worthy of investment, if its NPV is positive. The higher the NPV, the more attractive the project. NPV (also known as the discounted cash flow or DCF) analysis is standard practice to estimate the financial potential of a project for go/no-go investment decisions.</Body>
+			<Body>HawkEye first converts any given future free cash flow for each time period (say, year) to its present value using the following equation:</Body>
+			<Body>		PV = FV/(1+i)^n</Body>
+			<Body>	where: 		F = Future value</Body>
+			<Body>			PV = Present value</Body>
+			<Body>			i  = Discount rate per time period</Body>
+			<Body>			n = Number of time periods</Body>
+			<Body>It adds up all the PVs of the future cash flows and subtracts the sum from the initial investment to derive the project's NPV.</Body>
+			<SubSection>2.3 Project Cost</SubSection>
+			<Body>Project cost is the investment required for executing a project. The project cost is simply the sum of all the labor and non-labor costs of all the project tasks that collectively make up the project's scope of work. In some organizations, the internal costs associated with the labor resources are not included in the project cost equation but are evaluated separately.</Body>
+			<Body>In Project Cost module, HawkEye requires the cost of each project task (it's up to the user as to whether or not to include the internal labor cost) and calculates the project cost as the sum of all the individual task costs. Furthermore, it will add the cost impact of the risk events to the project cost in accordance with their probabilities of occurrence. In a deterministic calculation, the additional cost due to a risk event is its expected value, EV: probability of occurrence x cost impact. </Body>
+			<Body>For stochastic modeling, HawkEye performs Monte Carlo simulation to sample input values based on their respective distributions and calculates the total project cost for every iteration. When event risks are to be considered, the simulation includes them in the iterations in accordance with their probabilities and impacts on task costs. For example, a given risk will happen in X% of the iterations, where X is the probability of its occurrence. The project cost for that iteration equals the sum of all the project costs plus the cost impact of the risk event, which is a random value selected from its distribution (range). </Body>
+			<Body>In the schedule/cost integration module (discussed later), the user can provide more detail about the cost structure of each task. </Body>
+			<SubSection>2.4 Project Schedule</SubSection>
+			<Body>Project schedule, which is simply the project duration, is the time it takes to complete a project. HawkEye calculates the project duration using the critical path method (CPM). Given the duration estimates for the individual project tasks and their dependencies as inputs, HawkEye builds a network diagram representing the sequence in which the tasks will be performed. The longest path(s) on the diagram is identified as the critical path, and the length of that path is the project duration estimate. Furthermore, HawkEye will incorporate the schedule impact of the risk events on the network diagram in accordance with their probabilities of occurrence.  In a deterministic calculation, the additional (or reduced) duration for a task due to a risk event is its EV: probability of occurrence x schedule impact (days). HawkEye allows for the following schedule impacts:</Body>
+			<BulletBody>Additional duration for a task</BulletBody>
+			<BulletBody>A new estimate for the task duration</BulletBody>
+			<BulletBody>Addition of a new task</BulletBody>
+			<BulletBody>Reduction of task duration</BulletBody>
+			<BulletBody>Deletion of a task</BulletBody>
+			<Body>For stochastic modeling, HawkEye performs Monte Carlo simulation to randomly sample input values based on their respective distributions and calculates the total project duration for every iteration. When risks are involved, the simulation includes them in the iterations in accordance with their probabilities and impacts. For example, a given risk will happen in X% of the iterations, where X is the probability of its occurrence. The project duration for that iteration equals its critical path, which includes the risk impacts. The values for the risk impacts are based on random sampling from the distribution (range) of the impacts. </Body>
+			<SubSection>2.5 Schedule &amp; Cost Integration</SubSection>
+			<Body>HawkEye's Project Cost module, described in an earlier section, calculates the project cost independent of the task durations and the overall project duration. In every single iteration of the cost simulation model, the task cost values are randomly selected from their respective distributions without accounting for how long the project will take to complete. However, HawkEye's schedule/cost integration model accounts for the changes in cost due to the changes in task durations. </Body>
+			<Body>The schedule model in the integrated and "schedule only" modules are virtually the same. However, it's different for cost models. In the "cost only" module, random sampling of task costs is performed during the simulation, whereas in the integration module there is no "direct" random sampling of task costs. But there is an "indirect" random effect, because the task cost varies due to random changes in task durations. </Body>
+			<Body>Based on the input data, HawkEye considers that the effort (hrs/day) required to perform a task and the unit cost ($/hr) of any given labor resource are constant. Therefore, the daily labor resource cost (effort x unit cost) of a given task is constant. To calculate the total labor cost of a given task in an iteration of the simulation, the model multiplies this daily cost by the randomly selected task duration for that task; hence the "indirect" random effect mentioned earlier. So if the task duration increases or decreases, the cost also increases or decreases in direct proportion. If there is any non-labor cost associated with the task, you may create distribution for it in the input file, and for every iteration, HawkEye will randomly choose a value for the non-labor cost in accordance with its distribution.</Body>
+			<Body>When risk events are involved, in the model, some of them may impact both the schedule and cost, while others may impact cost or schedule only. The integration module accounts for impact of risks on costs in two ways: 1) Direct impact on non-labor costs and 2) Indirect impact because of the changes in task durations caused by risks. </Body>
+			<SubSection>2.6 Portfolio Optimization</SubSection>
+			<Body>This module helps you select the right mix of projects for a portfolio that would yield the highest portfolio NPV. Given a list of projects and their individual NPVs along with constraints, the portfolio optimization module will select the right project mix using an optimization algorithm. The module will allow the following constraints:</Body>
+			<BulletBody>Fixed portfolio investment</BulletBody>
+			<BulletBody>Fixed number of resources allocated to the portfolio</BulletBody>
+			<BulletBody>Mandatory projects (must-do) </BulletBody>
+			<BulletBody>Either project A or Project B can be selected (either, or)</BulletBody>
+			<BulletBody>If Project X is selected, then Project Y also must be selected (if, then)</BulletBody>
+			<Body>HawkEye's proprietary optimization algorithm will select the right projects based on single values of project NPVs in both deterministic and stochastic models taking into consideration the user specified constraints. In stochastic modeling, HawEye first performs Monte Carlo simulation to sample individual project NPVs based on their respective distributions and calculates the mean NPV for each project candidate. These mean project NPVs are then used as single values by HawkEye's optimization algorithm to build the optimum portfolio that would yield the maximum portfolio NPV. HawkEye generates "efficient frontier" in both deterministic and stochastic models. It's a plot of portfolio investment vs. portfolio NPV of the optimal portfolio for any given investment. </Body>
+			<SubSection>2.7 Decision Tree</SubSection>
+			<Body>A decision tree is basically a strategic map showing alternative decisions (go/no-go) during the project life cycle, the implementation cost of each decision (it may be considered the implementation cost associated with a "phase" of a project following a decision), possible outcomes of the decisions (e.g., success vs. failure), and the probabilities and payoffs of the respective outcomes. The decision tree module calculates EV for each outcome following the implementation of each decision. EV simply is the product of a cash flow (revenue or cost) and its probability of occurrence. For example, if there is a 70% probability that a revenue of $1 million will be realized, the EV is 0.7*$1,000,000 = $700,000. The module recommends a go/no-go "policy" decision at every decision point by comparing the EVs of the outcomes associated with the alternative decisions defined at that point. You can also perform stochastic analysis by creating distributions for the cash flows associated with the implementation of the decisions.</Body>
+			<Body>HawkEye is capable of creating decision trees with up to seven "consecutive" decision nodes (decision points). You can create two different decision trees showing the policy recommendations, one with EVs accounting for the "sunk" cost (which is the cost already incurred up to a given decision point) and the other without.</Body>
+		</Page>
+	</Module>
+	<Module id="Sensitivity Analysis">
+		<Page modified="2020-06-21T20:01:45.109395" name="Net Present Value" source="3H-A Sensitivity Analysis NPV PSK May 31 2020.docx">
+			<Title>Sensitivity Analysis - Net Present Value</Title><Section>1 Purpose</Section><Body>To perform one-dimensional sensitivity analysis for project net present value (NPV). </Body><Section>2 Module Description</Section><Body>NPV of a project is simply the difference, expressed in today's dollars, between the expected total free cash flow to be generated by its products or services during their lifetime and the initial investment required to develop those products and services. Free cash flow is the expected revenue discounted to today after accounting for cost of producing the products or services, operating expenses, interest, taxes and capital expenditures. NPV represents the "take home" profit due to the products or services resulting from the project. A project is deemed to be worthy of investment, if its NPV is positive. The higher the NPV, the more attractive the project. NPV (also known as the discounted cash flow or DCF) analysis is standard practice to estimate the financial potential of a project for go/no-go investment decisions.</Body><Body>HawkEye first converts any given future free cash flow (revenue or cost) for each time period (say, year) to its present value using the following equation:</Body><Body>		PV = FV/(1+i)^n</Body><Body>	where: 		F = Future value</Body><Body>			PV = Present value</Body><Body>			i  = Discount rate per time period</Body><Body>			n = Number of time periods</Body><Body>It adds up all the PVs of the future cash flows and subtracts the sum from the initial investment to derive the project's NPV.</Body><Body>Prior to performing a detailed stochastic modeling of project NPV using HawkEye, you may first apply one-dimensional sensitivity analysis. Stochastic modeling requires identification of distributions (e.g., normal, pert, triangular, etc.) and their parameters (e.g., minimum, most likely, and maximum values) for model input variables. It may involve a significant amount of effort, especially if the number of inputs is large, which is true with NPV models. However, it's only a few inputs that often have a significant impact on the model output. Therefore, common practice is to identify and focus on such significant inputs rather than expend an enormous effort on all the inputs. This is accomplished by evaluating the sensitivity of the output, that is, change in the output value, to change in the value of each input, one at a time; hence the name one dimensional sensitivity analysis. </Body><Body>HawkEye performs one-dimensional analysis for NPV as follows: 1) Start with the "base case" where NPV (output) is estimated using single deterministic values (base case values) for each required input; 2) Change each input value by +/- X% at a time while keeping all the other inputs at their respective base case values; 3) Calculate the NPV values for the two +/- scenarios; and 4) Compare the relative impact of each input variable on NPV by ranking them from the highest to the lowest in the form of a tornado diagram. (You may then select only the top few key input variables to create distribution for subsequent stochastic analysis.) </Body><Section>3 Section 1: File Upload</Section><Body>As part of the HawkEye software package, you're provided with two files for the NPV module for sensitivity analysis:</Body><Body>1) Sensitivity Analysis - Net Present Value Input Template:  This file is a template for the input data for the NPV module. You'll populate the required cells as input data and SAVE THE FILE WITH A NEW NAME, so that NPV Input Template file can be reused for a new project next time. The input values you enter into the file are considered "most likely" deterministic values and are for the base case project scenario.  </Body><Body>2) Sensitivity Analysis - Net Present Value Example Problem: This file contains an example for illustrating the input data needs and the file format. You can upload this file and go through the entire module calculations for practice purpose.</Body><BulletBody>Enter the input file name. You may click on "Browse" to locate the file you want to upload.</BulletBody><Section>4  Section 2: Settings</Section><BulletBody>Enter the annual discount rate.</BulletBody><BulletBody>Enter the +/-% change you want to apply to each one of the inputs to investigate its impact on the output, that is, NPV.</BulletBody><BulletBody>Click on the drop down menu for Top "N" impacts and select the results for  either the top 5, 10, 15, or 20 or top 10%, 25%, 50%, 75%, or 100% of the model inputs to be displayed on the tornado diagram. </BulletBody><Section>5  Section 3: Sensitivity Results for Analysis and Display/Save</Section><BulletBody>Click on "Analyze" for displaying the tornado diagram.</BulletBody><Body>The tornado diagram ranks the inputs (project cash flows) to the model in terms of their impact on NPV starting from the highest to the lowest. The base case NPV is the deterministic NPV of the project as calculated by HawkEye using the base case data provided in the input file. The left side and right side values of the NPV "bars" for any given input are NPVs when that input value is changed from its base case by +/- X%, while keeping the other inputs at their respective base case values. The blue color of the NPV bars indicates that the left and right side values correspond to a negative (-X%) and positive (+X%) change in the input, respectively, whereas for the red color NPV bars it's vice versa.</Body><Body>At the bottom left corner of the tornado diagrams generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body><BulletBody>Click on "Display/Save" to review the raw sensitivity analysis data. The data is presented in a spreadsheet, which you may want to save in a separate file.</BulletBody><Body>You can change the settings in Section 2 and rerun HawkEye as many times as you wish. Please note that the raw sensitivity analysis data from the previous run will be overwritten on the spreadsheet by the new data.  </Body></Page>
+		<Page modified="2020-06-01T20:09:12.054683" name="Project Cost" source="3H-B Sensitivity Analysis Cost PSK May 31 2020.docx">
+			<Title>Sensitivity Analysis - Project Cost</Title>
+			<Section>1 Purpose</Section>
+			<Body>To perform one-dimensional sensitivity analysis for project cost. </Body>
+			<Section>2 Module Description</Section>
+			<Body>Project cost is the initial investment required for executing the project. The project cost is simply the sum of all the labor and non-labor costs of all the project tasks that collectively make up the project's scope of work. In some organizations, the internal costs associated with the labor resources are not included in the project cost equation but are evaluated separately.</Body>
+			<Body>For performing the sensitivity analysis of cost, HawkEye calculates the project cost as the sum of all the individual task costs. It does not include the cost impact of risk events.  </Body>
+			<Body>Prior to performing a detailed stochastic modeling of project cost using HawkEye, you may first apply one-dimensional sensitivity analysis. Stochastic modeling requires identification of distributions (e.g., normal, pert, triangular, etc.) and their parameters (e.g., minimum, most likely, and maximum values) for model input variables. In the cost module, the inputs are individual task costs. Creating distribution for all the task costs may involve a significant amount of effort, especially if the number of tasks is large, which is true for most projects. </Body>
+			<Body>It's only a few inputs (e.g., task costs) that often have a significant impact on the model output (e.g., project cost). Therefore, common practice is to identify and focus on such significant inputs rather than expend an enormous effort on all the inputs. This is accomplished by evaluating the sensitivity of the output, that is, change in the output value, to change in the value of each input, one at a time; hence the name one-dimensional sensitivity analysis. </Body>
+			<Body>HawkEye performs one-dimensional analysis for cost as follows: 1) Start with the "base case" where project cost (output) is estimated using single deterministic values (base case values) for each individual task (inputs); 2) Change each task cost value by +/- X% at a time while keeping all the other task costs at their respective base case values; 3) Calculate the project costs for the two +/- scenarios; and 4) Compare the relative impact of each task cost on project cost by ranking them from the highest to the lowest in the form of a tornado diagram. (You may then select only the top few key tasks to create distribution for subsequent stochastic analysis.) </Body>
+			<Section>3 Section 1: File Upload</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the cost module for sensitivity analysis:</Body>
+			<Body>1) Sensitivity Analysis - Project Cost Input Template:  This file is a template for the input data for the cost module. You'll populate all the required input cells and SAVE THE FILE WITH A NEW NAME, so that Cost Input Template file can be reused for a new project next time. The input values you enter into the file are considered "most likely" deterministic values and are for the base case project scenario.  </Body>
+			<Body>2) Sensitivity Analysis - Project Cost Example Problem: This file contains an example for illustrating the input data needs and the file format. You can upload this file and go through the entire module calculations for practice purpose.</Body>
+			<BulletBody>Enter the input file name. You may click on "Browse" to locate the file you want to upload.</BulletBody>
+			<Section>4  Section 2: Settings</Section>
+			<BulletBody>Enter the +/-% change you want to apply to each one of the inputs to evaluate its impact on the output, that is, cost.</BulletBody>
+			<BulletBody>Click on the drop down menu for Top "N" impacts and select the results for  either the top 5, 10, 15, or 20 or top 10%, 25%, 50%, 75%, or 100% of the model inputs to be displayed on the tornado diagram. </BulletBody>
+			<Section>5 Section 3: Sensitivity Results for Analysis and Display/Save</Section>
+			<BulletBody>Click on "Analyze" for displaying the tornado diagram.</BulletBody>
+			<Body>The tornado diagram ranks the inputs (task costs) to the model in terms of their impact on cost starting from the highest to the lowest. The base case is the deterministic project cost as calculated by HawkEye using the base case data provided in the input file. The left side and right side values of the cost "bars" for any given input are project costs when that input's value is changed from its base case by +/- X%, while keeping the other inputs at their respective base case values. </Body>
+			<Body>At the bottom left corner of the tornado diagrams generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<BulletBody>Click on "Display/Save" to review the raw sensitivity analysis data. The data is presented in a spreadsheet, which you may want to save in a separate file.</BulletBody>
+			<Body>You can change the settings in Section 2 and rerun HawkEye as many times as you wish. Please note that the raw sensitivity analysis data from the previous run will be overwritten on the spreadsheet by the new data.  </Body>
+		</Page>
+		<Page modified="2020-06-01T20:09:58.474790" name="Project Schedule" source="3H-C Sensitivity Analysis Schedule PSK May 31 2020.docx">
+			<Title>Sensitivity Analysis - Project Schedule</Title>
+			<Section>1 Purpose</Section>
+			<Body>To perform one-dimensional sensitivity analysis for project schedule. </Body>
+			<Section>2 Module Description</Section>
+			<Body>Project schedule is same as the project duration and is the total time it takes to complete a project. HawkEye internally calculates the project duration using the critical path method (CPM). Given the duration estimates for the individual project tasks and their dependencies, HawkEye builds a network diagram representing the sequence in which the tasks will be performed. The longest path(s) on the diagram is identified as the critical path, and the length of that path is the project duration estimate. For sensitivity analysis, HawkEye does not include the schedule impact of risk events.  </Body>
+			<Body>Prior to performing a detailed stochastic modeling of schedule using HawkEye, you may first apply one-dimensional sensitivity analysis. Stochastic modeling requires identification of distributions (e.g., normal, pert, triangular, etc.) and their parameters (e.g., minimum, most likely, and maximum values) for model input variables. In the schedule module, the inputs are individual task durations and their dependencies. In stochastic modeling of schedule, distribution is created for task durations while keeping the task dependencies constant. Creating distribution for every task duration may involve a significant amount of effort, especially if the number of tasks is large, which is true for most projects. </Body>
+			<Body>It's only a few inputs (e.g., task durations) that often have a significant impact on the model output (e.g., project duration). Therefore, common practice is to identify and focus on such significant inputs rather than expend an enormous effort on all the inputs. This is accomplished by evaluating the sensitivity of the output, that is, change in the output value, to change in the value of each input, one at a time; hence the name one-dimensional sensitivity analysis. </Body>
+			<Body>HawkEye performs one-dimensional analysis for schedule as follows: 1) Start with the "base case" where project duration (output) is estimated using single deterministic values (base case values) for each task duration (inputs); 2) Change each task duration by +/- X% at a time while keeping all the other task durations at their respective base case values; 3) Calculate the project duration for the two +/- scenarios; and 4) Compare the relative impact of each task duration on the project duration by ranking them from the highest to the lowest in the form of a tornado diagram. (You may then select only the top few key tasks to create distribution for subsequent stochastic analysis.) </Body>
+			<Section>3 Section 1: File Upload</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the schedule module for sensitivity analysis:</Body>
+			<Body>1) Schedule Input Template:  This file is a template for the input data for the schedule module. You'll populate all the required input cells and SAVE THE FILE WITH A NEW NAME, so that Schedule Input Template file can be reused for a new project next time. The input values you enter into the file are considered "most likely" deterministic values and are for the base case project scenario.  </Body>
+			<Body>2) Schedule Example Problem: This file contains an example for illustrating the input data needs and the file format. You can upload this file and go through the entire module calculations for practice purpose.</Body>
+			<BulletBody>Enter the input file name. You may click on "Browse" to locate the file you want to upload.</BulletBody>
+			<Section>4 Section 2: Settings</Section>
+			<BulletBody>Enter the +/-% change you want to apply to each one of the inputs to evaluate its impact on the output, that is, project schedule.</BulletBody>
+			<BulletBody>Click on the drop down menu for Top "N" impacts and select the results for  either the top 5, 10, 15, or 20 or top 10%, 25%, 50%, 75%, or 100% of the model inputs to be displayed on the tornado diagram. </BulletBody>
+			<Section>5 Section 3: Sensitivity Results for Analysis and Display/Save</Section>
+			<BulletBody>Click on "Analyze" for displaying the tornado diagram.</BulletBody>
+			<Body>The tornado diagram ranks the inputs (task durations) to the model in terms of their impact on project duration starting from the highest to the lowest. The base case is the deterministic project duration as calculated by HawkEye using the base case data provided in the input file. The left side and right side values of the project duration "bars" for any given input are project durations when that input's value is changed from its base case by +/- X%, while keeping the other inputs at their respective base case values. </Body>
+			<Body>At the bottom left corner of the tornado diagrams generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<BulletBody>Click on "Display/Save" to review the raw sensitivity analysis data. The data is presented in a spreadsheet, which you may want to save in a separate file.</BulletBody>
+			<Body>You can change the settings in Section 2 and rerun HawkEye as many times as you wish. Please note that the raw sensitivity analysis data from the previous run will be overwritten on the spreadsheet by the new data.  </Body>
+		</Page>
+	</Module>
+	<Module id="Project Net Present Value">
+		<Page modified="2020-06-01T20:12:59.920474" name="filePage" source="4H NPV File Upload PSK May 31 2020.docx">
+			<Title>Net Present Value - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the NPV module </Body>
+			<Section>2 Module Description</Section>
+			<Body>NPV of a project is simply the difference, expressed in today's dollars, between the expected total free cash flow to be generated by its products or services during their lifetime and the initial investment required to develop those products and services. Free cash flow is the expected revenue discounted to today after accounting for cost of producing the products or services, operating expenses, interest, taxes and capital expenditures. NPV represents the "take home" profit due to the products or services resulting from the project. A project is deemed to be worthy of investment, if its NPV is positive. The higher the NPV, the more attractive the project. NPV (also known as the discounted cash flow or DCF) analysis is standard practice to estimate the financial potential of a project for go/no-go investment decisions.</Body>
+			<Body>HawkEye first converts any given future free cash flow (revenue or cost) for each time period (say, year) to its present value using the following equation:</Body>
+			<Body>		PV = FV/(1+i)^n</Body>
+			<Body>	where: 		F = Future value</Body>
+			<Body>			PV = Present value</Body>
+			<Body>			i  = Discount rate per time period</Body>
+			<Body>			n = Number of time periods</Body>
+			<Body>It adds up all the PVs of the future cash flows and subtracts the sum from the initial investment to derive the project's NPV.</Body>
+			<Body>The inputs to the module to be provided by the user are:</Body>
+			<BulletBody>Project's initial investment (capital) cost</BulletBody>
+			<BulletBody>Annual revenues</BulletBody>
+			<BulletBody>Annual costs</BulletBody>
+			<BulletBody>Type of distribution (e.g., normal, pert, triangular, etc.) for selected inputs (cash flows)</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the inputs with distributions</BulletBody>
+			<BulletBody>Annual discount rate(s) for discounting the cash flows</BulletBody>
+			<BulletBody>No. of iterations to be performed for Monte Carlo simulation</BulletBody>
+			<Body>If you're interested in calculating NPV deterministically, enter "No Distribution" for all in the inputs in the input file. </Body>
+			<Section>3 Module Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the NPV module:</Body>
+			<Body>1) Net Present Value Input Template: This file is a template for the input data for the NPV module. You'll populate all the required input cells as input data and SAVE THE FILE WITH A NEW NAME, so that Net Present Value Input Template file can be reused for a new project next time. </Body>
+			<Body>2) Net Present Value Example Problem: This file contains an example for illustrating the data needs and the format of the input file. You can upload this file and go through the entire model calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name. You may click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:14:55.848946" name="outputPage" source="5H NPV Output PSK May 31 2020.docx">
+			<Title>Net Present Value</Title>
+			<Section>1 Purpose</Section>
+			<Body>To perform stochastic analysis of project net present value (NPV)</Body>
+			<Section>2 Section 1: Discount Rates &amp; Simulation Settings</Section>
+			<BulletBody>Enter the annual project discount rate(s). You may enter up to three different rates separated by commas.</BulletBody>
+			<BulletBody>Enter the number of iterations.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulations using each input discount rate separately, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Body>If you're interested in calculating NPV deterministically, enter "No Distribution" for all the inputs in the input file, and simply choose 1 iteration in this section.</Body>
+			<Section>3 Section 2: Cash Flows Distribution Display</Section>
+			<BulletBody>Select a cash flow (input) using the Year: Cash Flow dropdown box.  The box next to the dropdown box will then display the type of distribution used for the cash flow you've selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the values of the selected cash flow HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display a chart showing the probability distribution of the values of the selected cash flow.</BulletBody>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Section>4 Section 3: Net Present Value Display</Section>
+			<Body>In this section you can display the NPV results from each simulation for all the discount rates selected in Section 1.</Body>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the NPV values from each simulation.</BulletBody>
+			<BulletBody>Click on "PDF Plot" to display the PDF plots of the NPV values from each simulation.</BulletBody>
+			<BulletBody>Click on "CDF Plot" to display the CDF plots of the NPV values from each simulation.</BulletBody>
+			<BulletBody>Click on the dropdown box that is next to "NPV Analysis" to select the discount rate to display the tornado diagram. </BulletBody>
+			<BulletBody>Click on "Tornado Diagram" to display the sensitivity of NPV as a function of the cash flows. The lowest and the highest values on the either side of the NPV bars on the diagram are the averages of the bottom 5% and the top 5% values, respectively, of all the iterations. Each cash flow is ranked in accordance with its impact on NPV from the highest to the lowest.</BulletBody>
+			<Section>5 Section 4: Simulation Results for Display/Save</Section>
+			<BulletBody>Click on "Display/Save" to review the raw simulation data. The data is presented in a spreadsheet, which you may want to save in a separate file.</BulletBody>
+			<Body>You can change the simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation data.  </Body>
+		</Page>
+	</Module>
+	<Module id="Project Cost">
+		<Page modified="2020-06-01T20:17:03.218942" name="filePage" source="6H Cost File Upload PSK May 31 2020.docx">
+			<Title>Project Cost - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the cost module </Body>
+			<Section>2 Module Description</Section>
+			<Body>Project cost is the investment required for executing a project. The project cost is simply the sum of all the labor and non-labor costs of all the project tasks that collectively make up the project's scope of work. In some organizations, the internal costs associated with the labor resources are not included in the project cost equation but are evaluated separately. You can also incorporate the impact of risk events on the task costs by providing the risk events data in the input file to the cost module in the form of a risk register.</Body>
+			<Body>The input file to the cost module consists of two spreadsheets containing different groups of module inputs:</Body>
+			<Body>1) Cost</Body>
+			<BulletBody>List of project tasks</BulletBody>
+			<BulletBody>Differentiation between discrete and level of effort tasks</BulletBody>
+			<BulletBody>Most likely estimate of each individual project task</BulletBody>
+			<BulletBody>Type of distribution (e.g., normal, pert, triangular, etc.) for selected task costs</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the task costs with distributions</BulletBody>
+			<Body>2) Risk Register</Body>
+			<BulletBody>Threats</BulletBody>
+			<BulletBody>Opportunities</BulletBody>
+			<BulletBody>Probability of each threat</BulletBody>
+			<BulletBody>Cost impact of each threat</BulletBody>
+			<BulletBody>Probability of each opportunity</BulletBody>
+			<BulletBody>Cost impact of each opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., binomial, Bernoulli, Poisson, etc.) for the probability of occurrence of each threat and opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for the impact of each threat and opportunity on cost</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the impact of each threat and opportunity on cost</BulletBody>
+			<Body>If you're interested in calculating project cost deterministically, enter "No Distribution" for all the task costs and risk impacts in the input file. </Body>
+			<Body>You will need to identify the number of iterations to be performed for Monte Carlo simulation.</Body>
+			<Section>3 Module Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the cost module:</Body>
+			<Body>1) Project Cost Input Template:  This file is a template for the input data for the cost module. You'll populate all the required input data cells and SAVE THE FILE WITH A NEW NAME, so that Project Cost Input Template file can be reused for a new project next time. There are two spreadsheets (in different tabs) within this file, namely, Cost and Risk Register.</Body>
+			<Body>2) Project Cost Example Problem: This file contains an example for illustrating the data needs and the format of the input file. You can upload this file and go through the entire model calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name: Click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:17:52.928701" name="outputPage" source="7H Cost Output PSK May 31 2020.docx">
+			<Title>Project Cost</Title>
+			<Section>1 Purpose</Section>
+			<Body>To perform stochastic analysis of project cost</Body>
+			<Section>2 Section 1: Simulation Settings</Section>
+			<Body>NOTE: This section does not apply, if you are in Schedule &amp; Cost Integration module.</Body>
+			<BulletBody>Enter the number of iterations.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulation, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Body>If you're interested in calculating the project cost deterministically, enter "No Distribution" for all the task costs in the input file, and simply choose 1 iteration in this section.</Body>
+			<Section>3.0 Section 2: Task &amp; Risk Event Distribution Display</Section>
+			<BulletBody>Select a task from the "ID: Task" dropdown box.  The box next to the dropdown box will then display the type of distribution used for the task you've selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the cost values HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display a chart showing the probability distribution of the cost values HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Select a risk event using the "ID: Risk Event" drop down box. The box next to the dropdown box will then display the type of distribution used for the risk event you selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the cost impact values of the risk event HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display two charts: </BulletBody>
+			<Body>1) Frequency distribution of the probability of occurrence of the risk event, and </Body>
+			<Body>2) Probability distribution of the cost impact values of the risk event HawkEye generated for the simulation purpose.</Body>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Section>4 Section 3: Project Cost Display</Section>
+			<Body>In this section you can display the project cost results from the simulations with and without risk events.</Body>
+			<BulletBody>Click on one of the two radio buttons, namely, "With Risk Events" and "Without Risk Events" for displays of "Project Cost" and "Project Cost Analysis". </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the cost values from the simulation.</BulletBody>
+			<BulletBody>Click on "PDF and CDF Plots" to display the PDF and CDF plots of the cost values from the simulation.</BulletBody>
+			<BulletBody>Click on one of the two radio buttons, namely, "Tornado Diagram" and "Correlation Coefficients".</BulletBody>
+			<BulletBody>Click on "Plot" to display either the tornado diagram or a list of correlation coefficients to examine the sensitivity of the project cost as a function of the task cost. In either case, the cost of any given task includes the impact of risks, depending upon your selection above.</BulletBody>
+			<Body>The lowest and the highest values on either side of the project cost bars on the tornado diagram are the averages of the bottom 5% and the top 5% values, respectively, of all the iterations. The tasks ranked in accordance with their impact on the project cost from the highest to the lowest. </Body>
+			<Body>The correlation coefficient of a task is based on the correlation between the project costs and the costs of that task from all the iterations. The coefficients (based on Pearson's correlation) are displayed in the form of bars starting from the highest to the lowest. </Body>
+			<Section>5 Section 4: Simulated Values for Display/Save</Section>
+			<BulletBody>Click on one of the radio buttons, namely, "With Risk Events" and "Without Risk Events".</BulletBody>
+			<BulletBody>Click on "Display/Save" to review the raw simulation data. The data is presented in a spreadsheet, which you may save as a separate file.</BulletBody>
+			<Body>You can change the simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation.  </Body>
+		</Page>
+	</Module>
+	<Module id="Project Schedule">
+		<Page modified="2020-06-01T20:19:01.448777" name="filePage" source="8H Schedule File Upload PSK May 31 2020.docx">
+			<Title>Schedule - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the schedule module</Body>
+			<Section>2 Module Description</Section>
+			<Body>Project schedule, which is simply is same as the project duration, and is the total time it takes to complete a project. HawkEye calculates the project duration using the critical path method (CPM). Given the duration estimates for the individual project tasks and their dependencies as inputs, it internally builds a network diagram representing the sequence in which the tasks will be performed. The longest path(s) on the diagram is identified as the critical path, and the length of that path is the project duration estimate. You can also incorporate the impact of risk events on the project duration by providing the risk events data in the input file to the module in the form of a risk register.</Body>
+			<Body>The input file to the integration module consists of two spreadsheets containing different groups of module inputs:</Body>
+			<Body>1) Schedule</Body>
+			<BulletBody>Individual task durations</BulletBody>
+			<BulletBody>Precedence relationships among tasks</BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for selected task durations</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the task durations with distributions</BulletBody>
+			<Body>You can also incorporate the impact of risk events on the task durations by providing the risk events data in the input file to the schedule module.</Body>
+			<Body>2) Risk Register</Body>
+			<BulletBody>Threats</BulletBody>
+			<BulletBody>Opportunities</BulletBody>
+			<BulletBody>Probability of each threat</BulletBody>
+			<BulletBody>Schedule impact of each threat</BulletBody>
+			<BulletBody>Probability of each opportunity</BulletBody>
+			<BulletBody>Schedule impact of each opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., binomial, Bernoulli, Poisson, etc.) for the probability of occurrence of each threat and opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for the impact of each threat and opportunity on schedule</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the impact of each threat and opportunity on schedule</BulletBody>
+			<Body>If you're interested in calculating project duration deterministically, enter "No Distribution" for all the task durations and risk impacts in the input file. </Body>
+			<Body>You will need to identify the number of iterations to be performed for Monte Carlo simulation.</Body>
+			<Section>3 Module Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the schedule module:</Body>
+			<Body>1) Project Schedule Input Template:  This file is a template for the input data for the schedule module. You'll populate all the required input data cells and SAVE THE FILE WITH A NEW NAME, so that Schedule Input Template file can be reused for a new project next time. As mentioned before, there are two spreadsheet (in different tabs) within this file, namely, Project Schedule and Risk Register.</Body>
+			<Body>2) Project Schedule Example Problem: This file contains an example for illustrating the data needs and the format of the input file. You can upload this file and go through the entire module calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name: Click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:20:25.968653" name="outputPage" source="9H Schedule Output PSK May 31 2020.docx">
+			<Title>Project Schedule </Title>
+			<Section>1 Purpose</Section>
+			<Body>To perform stochastic analysis of project schedule</Body>
+			<Section>2 Section 1: Simulation Settings</Section>
+			<Body>NOTE: This section does not apply, if you are in Schedule &amp; Cost Integration module.</Body>
+			<BulletBody>Enter the number of iterations.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulation, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Body>If you're interested in calculating the project duration deterministically, enter "No Distribution" for all the task durations in the input file and simply choose 1 iteration in this section.</Body>
+			<Section>3 Section 2: Task &amp; Risk Event Distribution Display</Section>
+			<BulletBody>Select a task using the "ID: Task" dropdown box.  The box next to the dropdown box will then display the type of distribution used for the task you've selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the task duration values HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display a chart showing the probability distribution of the task duration values HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Select a risk event using the "ID: Risk Event" drop down box. The box next to the dropdown box will then display the type of distribution used for the risk event you selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the schedule impact values of the risk event HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display two charts: </BulletBody>
+			<Body>1) Frequency distribution of the probability of occurrence of the risk event, and </Body>
+			<Body>2) Probability distribution of the schedule impact values of the risk event HawkEye generated for the simulation purpose.</Body>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Section>4 Section 3: Project Schedule Display</Section>
+			<Body>In this section you can display the project schedule results from the simulations with and without risk events.</Body>
+			<BulletBody>Click on one of the two radio buttons, namely, "With Risk Events" and "Without Risk Events" for displays of "Project Duration" and "Project Duration Analysis". </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the project duration from the simulation.</BulletBody>
+			<BulletBody>Click on "PDF and CDF Plots" to display the PDF and CDF plots of the project duration.</BulletBody>
+			<BulletBody>Click on one of the four radio buttons, namely, "Tornado Diagram", "Correlation Coefficients", "Critical Index", and "Schedule Impact Indicators".</BulletBody>
+			<BulletBody>Click on "Plot" to display the tornado diagram, correlation coefficients, critical Indexes, or schedule impact indicators to examine the sensitivity of the project duration as a function of the task duration. </BulletBody>
+			<BulletBody>The lowest and the highest values on either side of the project duration bars on the tornado diagram are the averages of the bottom 5% and the top 5% values, respectively, of all the iterations. The tasks are ranked in accordance with their impact on the project duration from the highest to the lowest. </BulletBody>
+			<BulletBody>The correlation coefficient of a task is based on the correlation between the project durations and the corresponding durations of that task from all the iterations. The coefficients (based on Pearson's correlation) are displayed in the form of bars starting from the highest to the lowest. </BulletBody>
+			<BulletBody>The critical Index shows how often (percentage) a task is on the critical path out of all the iterations. The critical Indexes are displayed in the form of bars with the percentage numbers starting from the highest to the lowest. </BulletBody>
+			<BulletBody>The schedule impact indicator of a task is its correlation coefficient multiplied by its critical index. The schedule impact indicators are displayed in the form of bars starting from the highest to the lowest. </BulletBody>
+			<Section>5 Section 4: Simulated Values for Display/Save</Section>
+			<BulletBody>Click on one of the radio buttons, namely, "With Risk Events" and "Without Risk Events".</BulletBody>
+			<BulletBody>Click on "Display/Save" to review the raw simulation data. The data is presented in a spreadsheet, which you may save as a separate file.</BulletBody>
+			<Body>You can change the simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation.  </Body>
+		</Page>
+	</Module>
+	<Module id="Schedule &amp; Cost Integration">
+		<Page modified="2020-06-01T20:21:47.548283" name="filePage" source="10H Schedule Cost Integration File Upload PSK May 31 2020.docx">
+			<Title>Schedule &amp; Cost Integration - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the schedule and cost integration model </Body>
+			<Section>2 Model Description</Section>
+			<Body>HawkEye's Project Cost module, described in an earlier section, calculates the project cost independent of the task durations and the overall project duration. In every single iteration of the cost simulation model, the task cost values are randomly selected from their respective distributions without accounting for how long the project will take to complete. However, HawkEye's schedule/cost integration model accounts for the changes in cost due to the changes in task durations. </Body>
+			<Body>The schedule model in the integrated and "schedule only" modules are virtually the same. However, it's different for cost models. In the "cost only" module, random sampling of task costs is performed during the simulation, whereas in the integration module there is no "direct" random sampling of task costs. But there is an "indirect" random effect, because the task cost varies due to random changes in task durations. </Body>
+			<Body>Based on the input data, HawkEye considers that the effort (hrs/day) required to perform a task and the unit cost ($/hr) of any given labor resource are constant. Therefore, the daily labor resource cost (effort x unit cost) of a given task is constant. To calculate the total labor cost of a given task in an iteration of the simulation, the model multiplies this daily cost by the randomly selected task duration for that task; hence the "indirect" random effect mentioned earlier. So if the task duration increases or decreases, the cost also increases or decreases in direct proportion. If there is any non-labor cost associated with the task, you may create distribution for it in the input file, and for every iteration, HawkEye will randomly choose a value for the non-labor cost in accordance with its distribution.</Body>
+			<Body>When risk events are involved, some of the risks may impact both the schedule and cost, while others may impact cost or schedule only. The integration module accounts for impact of risks on costs in two ways: 1) Direct impact on non-labor costs and 2) Indirect impact because of the changes in task durations caused by risks. </Body>
+			<Body>The input file to the integration module consists of three spreadsheets containing different groups of model inputs:</Body>
+			<Body>1)  Schedule</Body>
+			<BulletBody>Individual task durations</BulletBody>
+			<BulletBody>Precedence relationships of each task</BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for selected task durations</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the task durations with distributions</BulletBody>
+			<Body>2)  Cost</Body>
+			<BulletBody>A list of resources (both labor and non-labor) assigned to each task</BulletBody>
+			<BulletBody>Individual resource unit costs (both labor and non-labor)</BulletBody>
+			<BulletBody>Effort (hrs/day) required by each labor resource to perform each assigned task </BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for selected non-labor costs</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the non-labor costs with distributions</BulletBody>
+			<Body>3)  Risk Register</Body>
+			<BulletBody>Threats</BulletBody>
+			<BulletBody>Opportunities</BulletBody>
+			<BulletBody>Probability of each threat</BulletBody>
+			<BulletBody>Schedule and cost impact of each threat</BulletBody>
+			<BulletBody>Probability of each opportunity</BulletBody>
+			<BulletBody>Schedule and cost impact of each opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., binomial, Bernoulli, Poisson, etc.) for the probability of occurrence of each threat and opportunity</BulletBody>
+			<BulletBody>Types of distribution (e.g., normal, pert, triangular, etc.) for the impact of each threat and opportunity on cost and/or schedule</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the impact of each threat and opportunity on cost and schedule</BulletBody>
+			<Section>3 Model Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the schedule and cost integration model:</Body>
+			<Body>1) Schedule &amp; Cost Integration Input Template:  This file is a template for the input data for the schedule &amp; cost integration model. You'll populate all the required cells as input data and SAVE THE FILE WITH A NEW NAME, so that the original input template file can be reused for a new project next time.  As mentioned before, there are three spreadsheets (in different tabs) within this file, namely, Schedule, Cost, and Risk Register.</Body>
+			<Body>2) Schedule &amp; Cost Integration Example Problem: This file contains an example for illustrating the data needs and the format of the input file. You can upload this file and go through the entire model calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name: Click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:32:13.910411" name="outputPage" source="11H Schedule COst Integration Output PSK May 31 2020.docx">
+			<Title>Schedule &amp; Cost Integration</Title>
+			<Section>1 Purpose</Section>
+			<Body>To stochastically analyze project cost as a function of its schedule.</Body>
+			<Section>2 Section 1: Integration &amp; Simulation Settings</Section>
+			<Body>HawkEye calculates the project cost for every day for the entire project duration of every iteration. It has the capability to add up the costs in a cumulative fashion from day to day for whatever time increment/period, referred to as integration frequency, you are interested in. For example, if you're interested in monthly frequency, it adds up the project cost from month to month to generate cumulative cost data for every iteration and produces statistics (min, max, mean, percentiles, etc.) of the cumulative cost for each month considering all the iterations in the simulation. On the output interface, you can select the time periods as a month, week, or a customized period. </Body>
+			<BulletBody>Choose the integration frequency by selecting one of the radio buttons: "Monthly" (21 work days/period), "Weekly" (5 work days/period), or "Custom Frequency". If you chose "Custom Frequency", enter your desired "days per period" (must be work days) as an integer number in the box.</BulletBody>
+			<BulletBody>Enter the number of iterations for simulation.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulation, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Body>If you're interested in calculating the project cost deterministically, enter "No Distribution" for all the input variables in the input file, leave the risk register blank, and simply choose 1 iteration for simulation.</Body>
+			<Section>3 Section 2: Schedule &amp; Cost Only Results</Section>
+			<BulletBody>Click on one of the buttons, namely, "Schedule Only" and "Cost Only" for simulation results for project duration and project cost, respectively. Then depending upon your selection, a window will appear for either schedule or cost analysis, which is exactly the same window that appears when you're using schedule only or cost only modules, respectively. The "Help" instructions for either window can be found by clicking on "Help" button on it. Once you close the window, you will be back to the Schedule &amp; Cost Integrations output results interface. </BulletBody>
+			<Section>4 Section 3: Project Cumulative Cost Display.</Section>
+			<Body>In this section you can display the project cumulative cost results from the simulations with and without risk events in various formats.</Body>
+			<BulletBody>Click on one of the two radio buttons: "With Risk Events" and "Without Risk Events"</BulletBody>
+			<BulletBody>You may A) leave the default integration frequency value for the "Month/Week/Custom Period #" box in, or B) change the value. The default value is the highest time period no. in the simulation corresponding to the integration frequency selected in Section 1. For example, if you selected "Monthly" in Section 1, this box will display the number of the last month associated with the iteration with the longest project duration.</BulletBody>
+			<Body>A) If you leave the default integration frequency value in:</Body>
+			<Body>1) Click on "Statistics". It will display a chart showing the statistics related to the total project cost for all the iterations.  </Body>
+			<Body>2) Click on "PDF &amp; CDF". It will display the PDF and CDF plots for the total project cost. </Body>
+			<Body>3) Check the desired boxes: "Min", "Max", "Mean", and/or "Percentiles". If you checked "Percentiles", enter the desired percentiles (integer numbers) separated by commas in the box. </Body>
+			<Body>4) Click on "Plot". It will display a cumulative cost curve showing Project Cost vs. Project Duration. The plot will be for the minimum, maximum, mean, and percentile(s) of the iterations, per your selection in Step 3 above. </Body>
+			<Body>Note: All the above cost results are same as shown through the "Cost Only" interface you will reach after selecting "Cost Only" button illustrated in 3 Section 2: Schedule &amp; Cost Only Results above.</Body>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Body>B) If you want to change the integration frequency from the default value:</Body>
+			<Body>1) Insert a new number for the integration frequency in "Month/Week/Custom Period #" box (this no. must be an integer that is less than the default value).</Body>
+			<Body>2) Click on "Statistics", it will display the project cumulative cost statistics, for all the iterations up to the end of the selected time period. </Body>
+			<Body>3) Click on "PDF &amp; CDF". It will display the PDF and CDF plots for all the iterations up to the end of the selected time period.</Body>
+			<Body>4) Check the desired boxes: "Min", "Max", "Mean", and/or "Percentiles". If you checked "Percentiles", enter the desired percentiles (integer numbers) separated by commas in the box. </Body>
+			<Body>5) Click on "Plot". It will display a cumulative cost curve showing Project Cost vs. Project Duration up to the end of the selected time period. The plot will be for the minimum, maximum, mean, and percentile(s) of the iterations, per your selection in Step 4 above. </Body>
+			<Section>5 Section 4: Simulated Values - Display / Save</Section>
+			<BulletBody>Click on one of the radio buttons: "With Risk Events" and "Without Risk Events".</BulletBody>
+			<BulletBody>Check the desired boxes: "Duration", "Risk Events", "Cost", and "Cost Statistics".</BulletBody>
+			<BulletBody>Click on "Display / Save" to display the raw simulation data. The data is presented in a spreadsheet, which you may save as a separate file.</BulletBody>
+			<Body>You can change the simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation.  </Body>
+		</Page>
+	</Module>
+	<Module id="Portfolio Optimization">
+		<Page modified="2020-06-01T20:33:28.100422" name="filePage" source="12H Portfolio Optimization File Upload PSK May 31 2020.docx">
+			<Title>Portfolio Optimization - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the Portfolio Optimization module </Body>
+			<Section>2 Model Description</Section>
+			<Body>This model helps you select the right mix of projects for a portfolio that would yield the highest portfolio NPV. Given a list of project candidates and their individual NPVs along with constraints, the portfolio optimization model will select the right project mix using an optimization algorithm. </Body>
+			<Body>. The model will allow the following constraints:</Body>
+			<BulletBody>Fixed portfolio investment</BulletBody>
+			<BulletBody>Fixed number of resources allocated to the portfolio</BulletBody>
+			<BulletBody>Mandatory projects (must-do) </BulletBody>
+			<BulletBody>Either project A or Project B can be selected (either, or)</BulletBody>
+			<BulletBody>If Project X is selected, then Project Y also must be selected (if, then)</BulletBody>
+			<Body>HawkEye's proprietary optimization algorithm will select the right projects based on single values of project NPVs in both deterministic and stochastic models taking into consideration the user specified constraints. </Body>
+			<Body>In stochastic modeling, HawEye first performs Monte Carlo simulation to sample individual project NPVs based on their respective distributions and calculates the mean NPV for each project candidate. These mean project NPVs are then used as single values by HawkEye's optimization algorithm to build the optimum portfolio that would yield the maximum portfolio NPV. HawkEye generates "efficient frontier" in both deterministic and stochastic models. It's a plot of portfolio investment vs. portfolio NPV of the optimal portfolio for any given investment. </Body>
+			<Body>The input file to HawkEye's Portfolio Optimization module consists of one spreadsheet with the following model inputs:</Body>
+			<BulletBody>A list of project candidates and their respective NPVs</BulletBody>
+			<BulletBody>A list of constraints </BulletBody>
+			<BulletBody>Types of distribution (e.g., pert, triangular, etc.) for project NPVs</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for the project NPVs</BulletBody>
+			<Body>You will need to identify the number of iterations to be performed for Monte Carlo simulation.</Body>
+			<Body>The output results are displayed as:</Body>
+			<BulletBody>A list of selected projects for the portfolio (deterministic and stochastic)</BulletBody>
+			<BulletBody>Required investment and expected NPV of the optimum portfolio (deterministic and stochastic) and related statistics (stochastic)</BulletBody>
+			<BulletBody>Efficient Frontier (deterministic and stochastic)</BulletBody>
+			<BulletBody>Optimum portfolio NPV as a probability distribution function (PDF) (stochastic)</BulletBody>
+			<BulletBody>Optimum portfolio NPV as a cumulative distribution function (CDF) (stochastic)</BulletBody>
+			<BulletBody>Optimum portfolio NPV statistics based on the iterations (stochastic)</BulletBody>
+			<BulletBody>Raw data of all the iterations (stochastic)</BulletBody>
+			<Body>Visual display of the distribution of each input (that is, project NPV) in the form of a chart and the related statistics are also provided.</Body>
+			<Section>3 Model Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the portfolio optimization model:</Body>
+			<Body>1) Portfolio Optimization Input Template:  This file is a template for the input data for the portfolio optimization model. You'll need to populate all the required cells as input data and SAVE THE FILE WITH A NEW NAME, so that Portfolio Optimization Input Template file can be reused for a new portfolio next time. </Body>
+			<Body>2) Portfolio Optimization Example Problem: This file contains an example for illustrating the data needs and the format. You can upload this file and go through the entire model calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name: Click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:33:57.397480" name="outputPage" source="13H Portfolio Optimization Output PSK May 31 2020.docx">
+			<Title>Portfolio Optimization </Title>
+			<Section>1 Purpose</Section>
+			<Body>To select the right mix of projects for a portfolio that would yield the highest portfolio NPV.</Body>
+			<Section>2 Section 1: Constraints &amp; Simulation Settings</Section>
+			<BulletBody>Enter the amount of investment available for the portfolio as a positive integer number (e. g., 4000). </BulletBody>
+			<BulletBody>Enter the number of resources available for the portfolio as a positive integer number (e. g., 45). </BulletBody>
+			<BulletBody>Click on radio button "Fixed" and in the "Entry:" box below, enter project IDs separated with commas (e. g., A,B,C,D). Then  click "Add". As you complete this operation, these project IDs will appear in the large box on the left side below "Constraints:" (e.g., Fixed: A,B,C,D).</BulletBody>
+			<BulletBody>Click on radio button "Either, or" and in the "Entry:" box below, enter the two either/or project IDs separated by a comma (e. g., P,Q). Then click "Add". As you complete this operation, these project IDs (e.g., Either, or: P,Q) will appear in the large box on the left below "Constraints:". If you have more than one pair of projects for Either/or, repeat the above steps.</BulletBody>
+			<BulletBody>Click on radio button "If, then" and enter the two If/Then project IDs separated by a comma (e. g., X,Y). Then click "Add". As you complete this operation, these project IDs (e.g., If,Then: X,Y) will appear in the large box on the left side below "Constraints:". If you have more than one pair of projects for If/Then, repeat the above steps.</BulletBody>
+			<BulletBody>If you want to remove a constraint(s), which you have already added, select the constraint (one at a time) shown in the large box on the left below "Constraints:" and click on "Remove". </BulletBody>
+			<BulletBody>Enter the number of iterations.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulation, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Section>3 Section 2: Project Distribution Display</Section>
+			<BulletBody>Select the Project for which you'd like to see the distribution results using the "Project ID:" dropdown box.  The box next to the dropdown box will then display the type of distribution used for the project you've selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the project NPVs HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display a chart showing the probability distribution of the project NPVs HawkEye generated for the simulation purpose.</BulletBody>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Section>4 Section 3: Portfolio Optimization Results Display</Section>
+			<Body>In this section you can display deterministic and stochastic portfolio optimization results.</Body>
+			<BulletBody>Click on one of the two radio buttons, namely, "Stochastic" and "Deterministic" for displays of "Optimization Results" and "Efficient Frontier".</BulletBody>
+			<BulletBody>Click on "Optimization Results" to display two tables, one showing the NPV of the optimum portfolio and a list of selected projects and their investments and the other showing the constraints.</BulletBody>
+			<BulletBody>Click on "Efficient Frontier" to display a diagram showing the relationship between the required portfolio investment vs. the corresponding optimum portfolio NPV.</BulletBody>
+			<BulletBody>Click on "PDF &amp; CDF Plots" to display the PDF and CDF plots of the optimum portfolio NPV from the simulation.</BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the optimum portfolio NPV from the simulation.</BulletBody>
+			<Section>5 Section 4: Simulated Values for Display/Save</Section>
+			<BulletBody>Click on "Display/Save" to review the raw simulation data. The data is presented in a spreadsheet, which you may save as a separate file.</BulletBody>
+			<Body>You can change the constraints and simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation.  </Body>
+		</Page>
+	</Module>
+	<Module id="Decision Tree">
+		<Page modified="2020-06-01T20:36:23.487282" name="filePage" source="14H Decision Tree File Upload PSK May 31 2020.docx">
+			<Title>Decision Tree - File Upload</Title>
+			<Section>1 Purpose</Section>
+			<Body>To upload the input file for the decision tree model </Body>
+			<Section>2 Model Description</Section>
+			<Body>A decision tree is basically a strategic map showing alternative decisions (go/no-go) during the project life cycle, the implementation cost of each decision (it may be considered the implementation cost associated with a "phase" of a project following a decision), possible outcomes of the decisions (e.g., success or failure), and the probabilities and payoffs associated with the respective outcomes. The decision tree model calculates EV for each outcome following the implementation of each decision. EV simply is the product of a cash flow (revenue or cost) and its probability of occurrence. For example, if there is a 70% probability that a revenue of $1 million will be realized, the EV is 0.7*$1,000,000 = $700,000. The model recommends a go/no-go "policy" decision at every decision point, called decision node, by comparing the EVs of the outcomes associated with the alternative decisions available at that node. You can also perform stochastic analysis by creating distributions for the cash flows associated with the implementation of the decisions.</Body>
+			<Body>HawkEye is capable of creating decision trees with up to seven "consecutive" decision nodes. You can create two different decision trees showing the policy recommendations, one with EVs accounting for the "sunk" cost (which is the cost already incurred up to a given decision point) and one without.</Body>
+			<Body>The inputs to the model to be provided by the user are:</Body>
+			<BulletBody>Project costs</BulletBody>
+			<BulletBody>Types of distribution (e.g., pert, triangular, etc.) for project costs </BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for project costs and revenues</BulletBody>
+			<BulletBody>Outcome (e.g., success and failure) probabilities </BulletBody>
+			<BulletBody>Outcome payoff  </BulletBody>
+			<BulletBody>Types of distribution (e.g., pert, triangular, etc.) for outcome payoffs</BulletBody>
+			<BulletBody>Distribution parameters (e.g., minimum, most likely, and maximum values) for outcome payoffs</BulletBody>
+			<Body>You will need to identify the number of iterations to be performed for Monte Carlo simulation.</Body>
+			<Body>The model performs Monte Carlo simulation to sample cash flows (phase costs and , outcome impacts (in dollars) based on their respective distributions, and calculates EVs at each decisions node for each iteration. The output results are:</Body>
+			<BulletBody>Decision tree charts showing EVs for each outcome with or without sunk costs accounted for</BulletBody>
+			<BulletBody>EV at the first decision node as a probability distribution function (PDF)</BulletBody>
+			<BulletBody>EV at the first decision node as a cumulative distribution function (CDF)</BulletBody>
+			<BulletBody>EV statistics at the first decision node based on the iterations</BulletBody>
+			<BulletBody>Raw data of all the iterations</BulletBody>
+			<Section>3 Model Input Files</Section>
+			<Body>As part of the HawkEye software package, you're provided with two files for the Decision Tree module:</Body>
+			<Body>1) Decision Tree Input Template:  This file is a template for the input data for the decision tree model. You'll populate the required cells as input data and SAVE THE FILE WITH A NEW NAME, so that Decision Tree Input Template file can be reused for a new project next time. </Body>
+			<Body>2) Decision Tree Example Problem: This file contains an example for illustrating the data needs and the format. You can upload this file and go through the entire model calculations for practice purpose.</Body>
+			<Section>4 File Upload</Section>
+			<BulletBody>Enter the input file name: Click on "Browse" to locate the file you want to upload.</BulletBody>
+			<BulletBody>Click on "Next".</BulletBody>
+		</Page>
+		<Page modified="2020-06-01T20:36:51.111604" name="outputPage" source="15H Decision Tree Output PSK May 31 2020.docx">
+			<Title>Decision Tree</Title>
+			<Section>1 Purpose</Section>
+			<Body>To build a decision tree and calculate expected values (EVs) for different outcomes of alternative decisions at every decision node and recommend a "policy" for go/no-go at that node.</Body>
+			<Section>2 Section 1: Simulation Settings</Section>
+			<BulletBody>Enter the number of iterations.</BulletBody>
+			<BulletBody>Click "Run Simulation". When HawkEye completes the simulation, it will show a window with a message: "Simulation is Complete."</BulletBody>
+			<Section>3 Section 2: Decision Node Distribution Display</Section>
+			<BulletBody>Select the decision node using the "ID: Decision Node" dropdown box.  The box next to the dropdown box will then display the type of distribution used for the decision node you've selected. </BulletBody>
+			<BulletBody>Click on "Statistics" to display the statistics associated with the cost values of the decision at that node HawkEye generated for the simulation purpose.</BulletBody>
+			<BulletBody>Click on "Distribution" to display a chart showing the probability distribution of the cost values of the decision at that node HawkEye generated for the simulation purpose.</BulletBody>
+			<Body>At the bottom left corner of most of the output charts generated by HawkEye, you'll see a group of icons, which you may use to adjust the size of the charts. No help is provided on these icons, since they are self-explanatory. </Body>
+			<Section>4 Section 3: Decision Tree Results Display</Section>
+			<BulletBody>Click on one of the two radio buttons, namely, "Stochastic" and "Deterministic", to display simulated and non-simulated results, respectively.</BulletBody>
+			<BulletBody>Click on one of the two radio buttons, namely, "Maximum Value" and "Minimum Value", for choosing between greater and lower EV, respectively, corresponding to the available alternative decisions. </BulletBody>
+			<BulletBody>Click on "Decision Tree" to display the decision tree chart, wherein the sunk cost up to a decision node is included in the EV calculation. </BulletBody>
+			<BulletBody>Click on "Decision Tree Without Sunk Cost" to display the decision tree chart  wherein the sunk cost up to a decision node is not included in the EV calculation. </BulletBody>
+			<BulletBody>Click on "PDF &amp; CDF Plots" to display the PDF and CDF plots, respectively, of the EV of the policy decision at the first decision node from the simulation.</BulletBody>
+			<BulletBody>Click on "Expected Value Statistics" to display the statistics associated with the EVs from the simulation.</BulletBody>
+			<Section>5 Section 4: Simulated Values for Display/Save</Section>
+			<BulletBody>Click on "Browse" to review the raw simulation data. The data is presented in a spreadsheet, which you may save as a separate file.</BulletBody>
+			<Body>You can change the simulation settings in Section 1 and rerun HawkEye as many times as you wish. Please note that the raw simulation data from the previous simulation will be overwritten on the spreadsheet by the new simulation.  </Body>
+		</Page>
+	</Module>
+</Modules>

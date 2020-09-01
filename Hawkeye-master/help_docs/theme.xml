@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Help Window Theme Style for HawkEye-->
+<HawkeyeTheme>
+	<GeneralLayout border="0" wrap='word' marginH="100" marginV="20" /> <!--Window Layout-->
+	<Fonts>
+		<!--Fonts used in Styles, append new font if needed-->
+		<Font name="TitleFont" family="Cambria" size="15" style="bold" />
+		<Font name="SectionFont" fontName="Cambria" fontSize="12" fontStyle="bold" />
+		<Font name="SubSectionFont" fontName="Cambria" fontSize="12" fontStyle="bold italic" />
+		<Font name="BodyFont" fontName="Cambria" fontSize="12" fontStyle="" />
+	</Fonts>
+	<Bullets>
+		<Bullet name="Point" symbol="\u2022" indent="10" />
+	</Bullets>
+	<Styles>
+		<Style name="Title" Font="TitleFont" Bullet="" fgColor="" bgColor="" align="center" spaceBefore="20" spaceAfter="10" spaceLine="" indentLeftline1="" indentLeftOthers="" indentRight="" prepend="" append="\n" />
+		<Style name="Section" Font="SectionFont" Bullet="" fgColor="" bgColor="" align="left" spaceBefore="15" spaceAfter="5" spaceLine="" indentLeftline1="" indentLeftOthers="" indentRight="" prepend="" append="\n" />
+		<Style name="SubSection" Font="SubSectionFont" Bullet="" fgColor="" bgColor="" align="left" spaceBefore="10" spaceAfter="5" spaceLine="" indentLeftline1="" indentLeftOthers="" indentRight="" prepend="" append="\n" />
+		<Style name="Body" Font="BodyFont" Bullet="" fgColor="" bgColor="" align="left" spaceBefore="7" spaceAfter="7" spaceLine="1" indentLeftline1="" indentLeftOthers="" indentRight="" prepend="" append="\n" />
+		<Style name="BulletBody" Font="BodyFont" Bullet="Point" fgColor="" bgColor="" align="left" spaceBefore="" spaceAfter="" spaceLine="" indentLeftline1="35" indentLeftOthers="35" indentRight="" prepend="" append="\n" />
+		<Style name="Unassigned" Font="BodyFont" Bullet="" fgColor="red" bgColor="" align="left" spaceBefore="" spaceAfter="" spaceLine="" indentLeftline1="" indentLeftOthers="" indentRight="" prepend="" append="\n" />
+	</Styles>
+</HawkeyeTheme>

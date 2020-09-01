@@ -1,0 +1,7 @@
+##### Hawkeye Module - Package Requirements #####
+numpy
+matplotlib
+scipy
+xlrd
+pywin32
+networkx

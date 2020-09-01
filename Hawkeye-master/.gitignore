@@ -1,0 +1,26 @@
+# ignore self
+# .gitignore
+
+# ignore py cache file
+__pycache__
+
+# Ignore files in test folder
+test
+
+# Ignore oldversion Template folder
+Excel Templates/oldversion inputs
+
+# ignore all helper irrelavant file
+help_docs/*.docx
+
+# ignore PyInstaller/distribution related files
+distributions/build
+distributions/HawkeyeGUI
+distributions/PyInstallerWarning
+distributions/Hawkeye.zip
+
+# ignore backup files
+backups
+
+# ignore screenshots
+screenshots
